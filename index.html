@@ -32,7 +32,7 @@
   <link rel="stylesheet"
         href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <link rel="stylesheet" href="./static/css/index.css">
-  <link rel="icon" href="./static/images/favicon.svg">
+  <link rel="icon" href="./static/images/favicon.png">
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script defer src="./static/js/fontawesome.all.min.js"></script>
@@ -48,12 +48,110 @@
         <div class="column has-text-centered">
           <h1 class="title is-1 publication-title">Scaling Safe Multi-Agent Control for Signal Temporal Logic Specifications</h1>
           <div class="is-size-5 publication-authors">
-            <!-- <span class="author-block">
-              Anonymous</span> -->
+            <span class="author-block">
+              <a href="https://jeappen.github.io">Joe Eappen</a>,</span>
+            <span class="author-block">
+              <a href="https://xiong.zikang.me/">Zikang Xiong</a>,</span>
+            <span class="author-block">
+              <a href="https://www.dipampatel.in/">Dipam Patel</a>,
+            </span>
+            <span class="author-block">
+              <a href="https://www.cs.purdue.edu/homes/ab/">Aniket Bera</a>,
+            </span>
+            <span class="author-block">
+              <a href="https://www.cs.purdue.edu/homes/suresh/">Suresh Jagannathan</a>,
+            </span>
+          </div>
+          
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">Purdue University</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href="https://openreview.net/pdf?id=N1K4B8N3n1"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <!-- <span class="link-block">
+                <a href="https://arxiv.org/abs/2011.12948"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span> -->
+              <!-- Video Link. -->
+              <span class="link-block">
+                <a href="https://youtu.be/MYnEQjd3fF8"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                  </span>
+                  <span>Video</span>
+                </a>
+              </span>
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="https://github.com/jeappen/mastl-gcbf"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+            </div>
+
           </div>
         </div>
       </div>
     </div>
+  </div>
+</section>
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>Existing methods for safe multi-agent control using logic specifications
+like Signal Temporal Logic (STL) often face scalability issues. This is because
+they rely either on single-agent perspectives or on Mixed Integer Linear Programming (MILP)-based planners, which are complex to optimize. These methods
+have proven to be computationally expensive and inefficient when dealing with a
+large number of agents. </p>
+<p>To address these limitations, we present a new scalable
+approach to multi-agent control in this setting. Our method treats the relationships
+between agents using a graph structure rather than in terms of a single-agent perspective. Moreover, it combines a multi-agent collision avoidance controller with
+a Graph Neural Network (GNN) based planner, models the system in a decentralized fashion, and trains on STL-based objectives to generate safe and efficient
+plans for multiple agents, thereby optimizing the satisfaction of complex temporal
+specifications while also facilitating multi-agent collision avoidance. Our experiments show that our approach significantly outperforms existing methods that use
+a state-of-the-art MILP-based planner in terms of scalability and performance
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+
+    <!-- Paper video. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Video</h2>
+        <div class="publication-video">
+          <iframe src="https://www.youtube.com/embed/MYnEQjd3fF8?rel=0&amp;showinfo=0"
+                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+    <!--/ Paper video. -->
   </div>
 </section>
 
@@ -69,7 +167,7 @@
           <p>
             N = 8 agents with a GNN-ODE planner, sequence of 3 goals.
           </p>
-          <video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
+          <video id="video-n8_gnn_seq3" autoplay controls muted loop playsinline height="100%">
             <source src="./static/videos/demo/n8_gnn_seq3.mp4"
                     type="video/mp4">
           </video>
@@ -85,7 +183,7 @@
             <p>
               N = 32 agents with a GNN-ODE planner, sequence of 3 goals.
             </p>
-            <video id="matting-video" controls playsinline height="100%">
+            <video id="video-n32_gnn_seq3" controls playsinline height="100%">
               <source src="./static/videos/demo/n32_gnn_seq3.mp4"
                       type="video/mp4">
             </video>
@@ -101,17 +199,20 @@
 </section>
 
 
-<!-- <section class="section" id="BibTeX">
+<section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
     <h2 class="title">BibTeX</h2>
-    <pre><code>@article{park2021nerfies,
-  author    = {Park, Keunhong and Sinha, Utkarsh and Barron, Jonathan T. and Bouaziz, Sofien and Goldman, Dan B and Seitz, Steven M. and Martin-Brualla, Ricardo},
-  title     = {Nerfies: Deformable Neural Radiance Fields},
-  journal   = {ICCV},
-  year      = {2021},
-}</code></pre>
+    <pre><code>@inproceedings{
+      eappen2024scaling,
+      title={Scaling Safe Multi-Agent Control for Signal Temporal Logic Specifications},
+      author={Joe Eappen and Zikang Xiong and Dipam Patel and Aniket Bera and Suresh Jagannathan},
+      booktitle={8th Annual Conference on Robot Learning},
+      year={2024},
+      url={https://openreview.net/forum?id=N1K4B8N3n1}
+      }
+</code></pre>
   </div>
-</section> -->
+</section>
 
 
 <footer class="footer">
@@ -134,8 +235,8 @@
             Commons Attribution-ShareAlike 4.0 International License</a>.
           </p>
           <p>
-            Borrowed from the Nerfies site<a
-              href="https://github.com/nerfies/nerfies.github.io">this site.</a>
+            Borrowed from the <a
+              href="https://github.com/nerfies/nerfies.github.io">Nerfies site.</a>
           </p>
         </div>
       </div>

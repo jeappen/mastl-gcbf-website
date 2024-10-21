@@ -28,6 +28,8 @@ $(document).ready(function() {
       $(".navbar-menu").toggleClass("is-active");
 
     });
+    document.querySelector('#video-n8_gnn_seq3').defaultPlaybackRate = 2.0;
+    document.querySelector('#video-n8_gnn_seq3').play();
 
     var options = {
 			slidesToScroll: 1,
