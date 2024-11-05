@@ -155,20 +155,54 @@ a state-of-the-art MILP-based planner in terms of scalability and performance
   </div>
 </section>
 
+
+
+<section class="section">
+
+<div class="container is-max-desktop">
+<div class="columns is-centered">
+  <div class="column">
+    <!-- Demo -->
+
+    <h2 class="title is-3">Real World Demonstration</h2>
+    <div class="content has-text-justified">
+      <p>
+        Demo on 5 <a href="https://www.ryzerobotics.com/tello-edu"> DJI Tello Edu</a> drones.
+      </p>
+    </div>
+    <div class="content has-text-centered">
+      <video id="replay-video"
+             controls
+             muted
+             preload
+             playsinline
+             width="75%">
+        <source src="./static/videos/demo/finalm_5x.mp4"
+                type="video/mp4">
+      </video>
+    </div>
+  </div>
+
+  </div>
+</div>
+</div>
+</section>
+
 <section class="section">
   <div class="container is-max-desktop">
 
+    <h2 class="title is-3">DubinsCar Environment, Sequence of 3 goals</h2>
     <div class="columns is-centered">
 
       <!-- Visual Effects. -->
       <div class="column">
         <div class="content">
-          <h2 class="title is-3">DubinsCar, 8 agents</h2>
+          <h2 class="title is-3">GNN-ODE (Ours), 8 agents</h2>
           <p>
-            N = 8 agents with a GNN-ODE planner, sequence of 3 goals.
+            3x speed
           </p>
           <video id="video-n8_gnn_seq3" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/demo/n8_gnn_seq3.mp4"
+            <source src="./static/videos/demo/n8_gnn_seq3_3x.mp4"
                     type="video/mp4">
           </video>
         </div>
@@ -177,14 +211,14 @@ a state-of-the-art MILP-based planner in terms of scalability and performance
 
       <!-- Matting. -->
       <div class="column">
-        <h2 class="title is-3">DubinsCar, 32 agents</h2>
         <div class="columns is-centered">
           <div class="column content">
+            <h2 class="title is-3">GNN-ODE (Ours) , 32 agents</h2>
             <p>
-              N = 32 agents with a GNN-ODE planner, sequence of 3 goals.
+              3x speed
             </p>
             <video id="video-n32_gnn_seq3" controls playsinline height="100%">
-              <source src="./static/videos/demo/n32_gnn_seq3.mp4"
+              <source src="./static/videos/demo/n32_gnn_seq3_3x.mp4"
                       type="video/mp4">
             </video>
           </div>
@@ -192,7 +226,40 @@ a state-of-the-art MILP-based planner in terms of scalability and performance
         </div>
       </div>
     </div>
-    <!--/ Matting. -->
+    <div class="columns is-centered">
+
+      <!-- Visual Effects. -->
+      <div class="column">
+        <div class="content">
+          <h2 class="title is-3">STLPY, 8 agents</h2>
+          <p>
+            3x speed
+          </p>
+          <video id="video-n8_gnn_seq3" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/demo/n8_gnn_seq3_stlpy_3x.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+      </div>
+      <!--/ Visual Effects. -->
+
+      <!-- Matting. -->
+      <div class="column">
+        <div class="columns is-centered">
+          <div class="column content">
+            <h2 class="title is-3">STLPY , 32 agents</h2>
+            <p>
+              3x speed
+            </p>
+            <video id="video-n32_stlpy_seq3" controls playsinline height="100%">
+              <source src="./static/videos/demo/n32_gnn_seq3_stlpy_3x.mp4"
+                      type="video/mp4">
+            </video>
+          </div>
+
+        </div>
+      </div>
+    </div>
 
     <!-- end.html -->
   </div>
